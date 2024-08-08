@@ -27,12 +27,19 @@ This repository contains sample configuration scripts (Terraform and more to com
 
 ## Terraform
 
-1. Provision infrastructure (review terraform plan and approve)
+1. Clone the repo
+
+    ```powershell
+    git clone https://github.com/fonsecamar/cosmos-security.git
+    cd cosmos-security/terraform
+    ```
+
+2. Provision infrastructure (review terraform plan and type 'yes' to approve)
 
     ```
     az login
-    az account set --subscription <subscription id>
-    terraform apply
+    ./terraform.exe init
+    ./terraform.exe apply
     ```
 
 ## Testing connectivity
