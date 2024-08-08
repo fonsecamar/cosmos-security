@@ -44,17 +44,17 @@ This repository contains sample configuration scripts (Terraform and more to com
 
 ## Testing connectivity
 
-2. Connect to your VM using RDP
+2. Connect to your VM using RDP using temporary credentials (adminuser/Password1234!)
 
-3. Test private ip resolution
+3. Install Python (https://www.python.org/downloads/windows/)
+
+4. Test private ip resolution
 
     ```powershell
     nslookup cosmos-security-demo-<sufix>.documents.azure.com
     ```
 
     ![Private Endpoint Result](privateendpoint.jpg)
-
-4. Install Python3 (https://www.python.org/downloads/windows/)
 
 5. Copy sample.py to the VM
 
@@ -69,7 +69,7 @@ This repository contains sample configuration scripts (Terraform and more to com
 
     ```powershell
     $env:COSMOS_ENDPOINT="https://cosmos-security-demo-<sufix>.documents.azure.com:443/"
-    python3 .\sample.py
+    python .\sample.py
     ```
 
 You should see the results of Point Read and Query operations.
